@@ -1,0 +1,144 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:900);
+
+body {
+    background:#111;
+    font:14px/1.4 sans-serif;
+    color:#ddd;
+}
+
+a {
+    color:#ddd;
+    text-decoration:none;
+}
+
+header {
+    margin:20px 0 30px;
+}
+header a {
+    font:32px/1.4 'Roboto', sans-serif;
+    font-weight:700;
+    margin:0;
+}
+
+h3 {
+    margin:0 auto 40px;
+    color:#555;
+    font-weight:normal;
+    text-transform:uppercase;
+}
+h4 {
+    font-size:23px;
+}
+
+footer {
+    width:300px;
+    margin:50px auto;
+}
+footer p:before {
+    display:block;
+    width:50px;
+    border-top:2px solid #333;
+    margin:0 auto 15px;
+    content:' ';
+}
+
+.button {
+    display:block;
+    background:#333;
+    border-radius:7px;
+    text-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow:0 0 5px rgba(0, 0, 0, 0.6);
+    padding:15px;
+}
+
+#overlay {
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;s
+    z-index:2;
+    background:rgba(0, 0, 0, 0.9);
+    padding:5% 5% 0;
+}
+
+#overlay img {
+    display:block;
+    margin:auto;
+    width:100%;
+    max-width:640px;
+    box-shadow:0 0 60px rgba(0, 0, 0, 0.9);
+    border-radius:2px;
+}
+
+.home {
+    text-align:center;
+}
+.home section {
+    width:300px;
+    margin:auto;
+}
+.home h4 {
+    margin:auto;
+}
+.home p {
+    margin:0 auto 20px;
+}
+.home p {
+    color:#bbb;
+}
+
+
+.portfolio {
+    text-align:center;
+}
+.portfolio section {
+
+}
+.portfolio ul {
+    list-style-type:none;
+    margin:auto;
+    padding:0;
+    max-width:980px;
+}
+.portfolio li {
+    margin:0 auto 20px;
+    padding:0 10px;
+    width:280px;
+    display:inline-block;
+    vertical-align:top;
+    color:#ccc;
+}
+.portfolio span {
+    display:block;
+    color:#555;
+    width:200px;
+    margin:5px auto;
+}
+.portfolio li a {
+    display:block;
+}
+.portfolio li img {
+    border:5px solid #222;
+    border-radius:2px;
+}
+
+.shapes {
+    text-align:center;
+}
+
+.shapes p {
+    width:300px;
+    margin:auto;
+}
+
+.shapes .download a {
+    margin:20px;
+}
+
+.shapes img {
+    width:96%;
+    max-width:640px;
+    height:auto;
+    margin:0 2%;
+    opacity:.7;
+}
