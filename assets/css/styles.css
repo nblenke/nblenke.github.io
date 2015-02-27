@@ -22,7 +22,7 @@ header a {
 
 h3 {
     margin:0 auto 40px;
-    color:#555;
+    color:#666;
     font-weight:normal;
     text-transform:uppercase;
 }
@@ -67,6 +67,15 @@ footer p:before {
     width:100%;
     max-width:640px;
     box-shadow:0 0 60px rgba(0, 0, 0, 0.9);
+    border-radius:2px;
+}
+
+#overlay iframe {
+    width:375px;
+    height:667px;
+    box-shadow:0 0 60px rgba(0, 0, 0, 0.9);
+    background:#fff;
+    border:8px solid #111;
     border-radius:2px;
 }
 

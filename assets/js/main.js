@@ -1,31 +1,42 @@
 (function () {
     'use strict';
 
-    (function () {
-        var str = 'nblenke.github.io';
-
-        if (window.location.hostname.search(/github/) !== -1) {
-            document.querySelector('title').innerHTML = str;
-            document.querySelector('header a').innerHTML = str;
-        }
-    }());
+    if (window.location.hostname.search(/github/) !== -1) {
+        document.querySelector('header a').innerHTML = 'nblenke.github.io';
+    }
 
     (function () {
-        var previewLinks = document.querySelectorAll('.preview'),
+        var sendMailTo = function (name, domain, ext) {
+                var str = 'mai' + 'lto:' + name + '@' + domain + '.' + ext;
+                window.location.replace(str);
+            },
+            previewLinks = document.querySelectorAll('.preview'),
             preview = function (el) {
                 el.addEventListener('click', function (ev) {
                     var body = document.body,
                         html = document.documentElement,
                         height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight),
                         overlay = document.createElement('div'),
-                        img = document.createElement('img');
+                        img = document.createElement('img'),
+                        iframe = document.createElement('iframe'),
+                        isMobilePreview = el.className.search(/mobile/) !== -1;
 
+                    if (isMobilePreview && window.navigator.userAgent.search(/iphone|android/i) !== -1) {
+                        el.setAttribute('target', '_blank');
+                        return;
+                    }
+                    
                     ev.preventDefault();
 
-                    img.setAttribute('src', ev.currentTarget.href);
-
+                    if (isMobilePreview) {
+                        iframe.setAttribute('src', el.href);
+                        overlay.appendChild(iframe);
+                    } else {
+                        img.setAttribute('src', ev.currentTarget.href);
+                        overlay.appendChild(img);
+                    }
+                    
                     overlay.id = 'overlay';
-                    overlay.appendChild(img);
                     overlay.setAttribute('style', 'height:' + height + 'px');
 
                     body.appendChild(overlay);
@@ -42,15 +53,11 @@
         for (i; i < previewLinks.length; i += 1) {
             preview(previewLinks[i]);
         }
+        
+        document.querySelector('#email').addEventListener('click', function (ev) {
+            ev.preventDefault();
+            sendMailTo('nathan', 'blenke', 'com');
+        });
     }());
+    
 }());
-
-/* jshint ignore:start */
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-2411695-1', 'auto');
-ga('send', 'pageview');
-/* jshint ignore:end */
