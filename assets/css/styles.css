@@ -1,5 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto:900);
 
+*, body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
 body {
     background:#111;
     font:14px/1.4 sans-serif;
@@ -48,7 +56,9 @@ footer p:before {
     border-radius:7px;
     text-shadow:0 1px 3px rgba(0, 0, 0, 0.3);
     box-shadow:0 0 5px rgba(0, 0, 0, 0.6);
-    padding:15px;
+    padding:0 15px;
+    height:48px;
+    line-height:48px;
 }
 
 #overlay {
@@ -137,7 +147,7 @@ footer p:before {
 
 .shapes p {
     width:300px;
-    margin:0 auto 14px;
+    margin:0 auto 20px;
 }
 
 .shapes .download a {
@@ -145,7 +155,7 @@ footer p:before {
 }
 
 .shapes img {
-    width:96%;
+    width:90%;
     max-width:640px;
     height:auto;
     margin:0 2%;
@@ -153,5 +163,5 @@ footer p:before {
 }
 
 .shapes footer a {
-    margin:0 20px 9px;
+    margin:0 20px 20px;
 }
