@@ -25,7 +25,7 @@
                         el.setAttribute('target', '_blank');
                         return;
                     }
-                    
+
                     ev.preventDefault();
 
                     if (isMobilePreview) {
@@ -35,7 +35,7 @@
                         img.setAttribute('src', ev.currentTarget.href);
                         overlay.appendChild(img);
                     }
-                    
+
                     overlay.id = 'overlay';
                     overlay.setAttribute('style', 'height:' + height + 'px');
 
@@ -53,11 +53,11 @@
         for (i; i < previewLinks.length; i += 1) {
             preview(previewLinks[i]);
         }
-        
-        document.querySelector('#email').addEventListener('click', function (ev) {
-            ev.preventDefault();
-            sendMailTo('nathan', 'blenke', 'com');
-        });
+
+        // document.querySelector('#email').addEventListener('click', function (ev) {
+        //     ev.preventDefault();
+        //     sendMailTo('nathan', 'blenke', 'com');
+        // });
     }());
-    
+
 }());
