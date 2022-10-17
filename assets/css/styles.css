@@ -94,9 +94,9 @@ footer p:before {
 .home {
     text-align:center;
 }
-.home section {
-    width:300px;
-    margin:auto;
+.home main {
+    width: 300px;
+    margin: auto;
 }
 .home h3 {
     margin: 30px 0;
@@ -128,7 +128,7 @@ footer p:before {
     max-width:980px;
 }
 .portfolio li {
-    margin:0 auto 20px;
+    margin:0 auto 40px;
     padding:0 10px;
     width:280px;
     display:inline-block;
